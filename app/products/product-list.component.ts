@@ -4,6 +4,8 @@ import{IProduct} from './product'
     selector:'pm-products',
     templateUrl:'app/products/product-list.component.html',
     styleUrls:['app/products/product-list.component.css']
+    
+    
 
 })
 export class ProductListComponent implements OnInit{
