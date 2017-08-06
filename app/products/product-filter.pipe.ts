@@ -13,7 +13,5 @@ let filter:string=args?args.toLocaleLowerCase():null;
 return filter?value.filter((product:IProduct)=>
 product.productName.toLocaleLowerCase().indexOf(filter)!=-1):value;
 }
-
-
-    
+  
 }
