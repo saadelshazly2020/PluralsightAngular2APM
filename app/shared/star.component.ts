@@ -6,10 +6,14 @@ templateUrl:'app/shared/star.component.html',
 styleUrls:['app/shared/star.component.css']
 })
 export class StarComponent implements OnChanges{
-@Input() rating:number;
-startWidth:number;
-
+@Input() rating:number=3.2;
+starWidth:number;
+@Output() ratingClicked:EventEmitter<string>=new EventEmitter<string>();
 ngOnChanges():void{
-this.startWidth=this.rating *86/5;
+this.starWidth=this.rating *86/5;
+}
+onClick(){
+    this.ratingClicked.emit(`the rating ${this.rating} was clicked`);
+    
 }
 }

@@ -10,8 +10,9 @@ var core_1 = require("@angular/core");
 var ProductListComponent = (function () {
     function ProductListComponent() {
         this.showImage = false;
-        this.listFilter = "Cart";
+        this.listFilter = "";
         this.btnText = "ShowImage";
+        this.pageTitle = "Product List";
         this.products = [
             {
                 "productId": 1,
@@ -76,6 +77,9 @@ var ProductListComponent = (function () {
     ;
     ProductListComponent.prototype.ngOnInit = function () {
         console.log("In OnInit");
+    };
+    ProductListComponent.prototype.onRatingClicked = function (message) {
+        this.pageTitle = this.pageTitle + message;
     };
     return ProductListComponent;
 }());

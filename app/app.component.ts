@@ -11,5 +11,5 @@ import{ProductListComponent} from './products/product-list.component';
    
 })
 export class AppComponent { 
-    pageTitle:string="Auhered By Saad Elshazly";
+    pageTitle:string="Acme App";
 }

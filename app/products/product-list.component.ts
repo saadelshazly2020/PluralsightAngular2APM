@@ -8,8 +8,9 @@ import{IProduct} from './product'
 })
 export class ProductListComponent implements OnInit{
     showImage:boolean=false;
-    listFilter:string="Cart";
+    listFilter:string="";
     btnText:string ="ShowImage";
+    pageTitle:string="Product List";
     products:IProduct[]=[
     {
         "productId": 1,
@@ -72,6 +73,10 @@ toggleImage():void{
     };
 ngOnInit():void{
 console.log("In OnInit");
+}
+onRatingClicked(message:string):void{
+
+    this.pageTitle=this.pageTitle+message;
 }
 
 }
