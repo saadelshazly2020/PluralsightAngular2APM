@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import{ProductListComponent} from './products/product-list.component';
 import {ProductService} from './products/product.service';
+import { HttpModule } from '@angular/http';
+import 'rxjs/Rx';
 @Component({
     selector: 'pm-app',//this is the directive name that is used in the view to load that component
     template: `
@@ -9,7 +11,7 @@ import {ProductService} from './products/product.service';
         <pm-products></pm-products>
         </div>
     `,
-    providers:[ProductService]
+    providers:[ProductService,HttpModule]
    
 })
 export class AppComponent { 

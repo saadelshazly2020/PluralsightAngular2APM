@@ -12,6 +12,7 @@ export class ProductListComponent implements OnInit{
     btnText:string ="ShowImage";
     pageTitle:string="Product List";
     products:IProduct[];
+    errorMessage:string;
     //inject ProductService Class intproduct list class by using constructor
     //this is the dependency injection in angular 2 or in type script
     constructor(private _productService:ProductService){
@@ -26,7 +27,9 @@ toggleImage():void{
         this.btnText="showImage";
     };
 ngOnInit():void{
-this.products=this._productService.getProducts();
+this._productService.getProducts()
+.subscribe(products=>this.products=products,
+error=>this.errorMessage=<any>error);
 }
 onRatingClicked(message:string):void{
 
