@@ -7,9 +7,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
+var product_list_component_1 = require("./products/product-list.component");
 var product_service_1 = require("./products/product.service");
 var http_1 = require("@angular/http");
 require("rxjs/Rx");
+var router_1 = require("@angular/router");
+var welcome_component_1 = require("./home/welcome.component");
 var AppComponent = (function () {
     function AppComponent() {
         this.pageTitle = "Acme App";
@@ -24,4 +27,9 @@ AppComponent = __decorate([
     })
 ], AppComponent);
 exports.AppComponent = AppComponent;
+exports.routes = [
+    { path: '/welcome', component: welcome_component_1.WelcomeComponent },
+    { path: '/products', component: product_list_component_1.ProductListComponent }
+];
+exports.routing = router_1.RouterModule.forRoot(exports.routes);
 //# sourceMappingURL=app.component.js.map
