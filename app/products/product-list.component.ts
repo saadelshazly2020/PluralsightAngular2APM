@@ -7,7 +7,7 @@ import{IProduct} from './product'
     styleUrls:['app/products/product-list.component.css']
 })
 export class ProductListComponent implements OnInit{
-    showImage:boolean=false;
+    showImage:boolean=true;
     listFilter:string="";
     btnText:string ="ShowImage";
     pageTitle:string="Product List";

@@ -16,7 +16,7 @@ var ProductListComponent = (function () {
     //this is the dependency injection in angular 2 or in type script
     function ProductListComponent(_productService) {
         this._productService = _productService;
-        this.showImage = false;
+        this.showImage = true;
         this.listFilter = "";
         this.btnText = "ShowImage";
         this.pageTitle = "Product List";

@@ -9,13 +9,10 @@ import{ProductListComponent} from './products/product-list.component';
 import { WelcomeComponent }  from './home/welcome.component';
 
 export const routes: Routes = [
-  { path: '/welcome', component: WelcomeComponent },
-  { path: '/products', component: ProductListComponent }
+  { path: 'welcome', component: WelcomeComponent },
+  { path: 'products', component: ProductListComponent }
 ];
 
-// Deprecated provide
-// export const APP_ROUTER_PROVIDERS = [
-//   provideRouter(routes)
-// ];
+
 
 export const routing: ModuleWithProviders = RouterModule.forRoot(routes);

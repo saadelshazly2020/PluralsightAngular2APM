@@ -12,18 +12,24 @@ import { WelcomeComponent }  from './home/welcome.component';
     selector: 'pm-app',//this is the directive name that is used in the view to load that component
     template: `
     <div>
-    <h1> {{pageTitle}}</h1>
-        <pm-products></pm-products>
+        <nav calss="navbar vavbar-default">
+        <h1 class="navbar-barnd" style="text-align:center">{{pageTitle}}</h1>
+              <div class="container-fluid">
+                    
+                    <ul class="nav navbar-nav">
+                        <li><a [routerLink]="['welcome']" >Home</a> </li>
+                        <li><a [routerLink]="['products']" >Product List</a></li>
+                    </ul>
+               </div>
+        </nav>
+        <div class="container">
+        <router-outlet></router-outlet>
         </div>
+    </div>
     `,
     providers:[ProductService,HttpModule]
    
 })
 export class AppComponent { 
-    pageTitle:string="Acme App";
+    pageTitle:string="Acme product managment";
 }
-export const routes: Routes = [
-  { path: '/welcome', component: WelcomeComponent },
-  { path: '/products', component: ProductListComponent }
-];
-export const routing: ModuleWithProviders = RouterModule.forRoot(routes);
