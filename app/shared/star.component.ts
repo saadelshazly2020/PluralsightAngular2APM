@@ -7,9 +7,9 @@ styleUrls:['app/shared/star.component.css']
 })
 export class StarComponent implements OnChanges{
 @Input() rating:number;
-startWidth:number;
+starWidth:number;
 
 ngOnChanges():void{
-this.startWidth=this.rating *86/5;
+this.starWidth=this.rating *86/5;
 }
 }
